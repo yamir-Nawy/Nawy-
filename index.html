@@ -281,8 +281,9 @@
                             <span class="bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-sm font-bold">9 agents</span>
                         </div>
                         <div class="space-y-2 text-sm">
-                            <div class="flex justify-between"><span class="text-slate-400">Days Off:</span><span class="text-red-400 font-medium">Fri, Sat</span></div>
-                            <div class="flex justify-between"><span class="text-slate-400">Work Days:</span><span class="text-emerald-400 font-medium">Sun, Mon, Tue, Wed, Thu</span></div>
+                            <div class="flex justify-between"><span class="text-slate-400">Days Off:</span><span id="groupAOff" class="text-red-400 font-medium">—</span></div>
+                            <div class="flex justify-between"><span class="text-slate-400">Work Days:</span><span id="groupAWork" class="text-emerald-400 font-medium">—</span></div>
+                            <div class="text-xs text-slate-500 pt-1" id="groupAPattern">Loading…</div>
                         </div>
                     </div>
                     <div class="glass rounded-xl p-6 border border-slate-800 group-b">
@@ -291,8 +292,9 @@
                             <span class="bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full text-sm font-bold">10 agents</span>
                         </div>
                         <div class="space-y-2 text-sm">
-                            <div class="flex justify-between"><span class="text-slate-400">Days Off:</span><span class="text-red-400 font-medium">Sun, Mon</span></div>
-                            <div class="flex justify-between"><span class="text-slate-400">Work Days:</span><span class="text-emerald-400 font-medium">Tue, Wed, Thu, Fri, Sat</span></div>
+                            <div class="flex justify-between"><span class="text-slate-400">Days Off:</span><span id="groupBOff" class="text-red-400 font-medium">—</span></div>
+                            <div class="flex justify-between"><span class="text-slate-400">Work Days:</span><span id="groupBWork" class="text-emerald-400 font-medium">—</span></div>
+                            <div class="text-xs text-slate-500 pt-1" id="groupBPattern">Loading…</div>
                         </div>
                     </div>
                     <div class="glass rounded-xl p-6 border border-slate-800 group-c">
@@ -301,8 +303,9 @@
                             <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-sm font-bold">9 agents</span>
                         </div>
                         <div class="space-y-2 text-sm">
-                            <div class="flex justify-between"><span class="text-slate-400">Days Off:</span><span class="text-red-400 font-medium">Tue, Wed</span></div>
-                            <div class="flex justify-between"><span class="text-slate-400">Work Days:</span><span class="text-emerald-400 font-medium">Thu, Fri, Sat, Sun, Mon</span></div>
+                            <div class="flex justify-between"><span class="text-slate-400">Days Off:</span><span id="groupCOff" class="text-red-400 font-medium">—</span></div>
+                            <div class="flex justify-between"><span class="text-slate-400">Work Days:</span><span id="groupCWork" class="text-emerald-400 font-medium">—</span></div>
+                            <div class="text-xs text-slate-500 pt-1" id="groupCPattern">Loading…</div>
                         </div>
                     </div>
                 </div>
@@ -380,12 +383,13 @@
                         <div class="space-y-3">
                             <div class="flex justify-between text-sm">
                                 <span class="text-slate-400">Days Off</span>
-                                <span class="text-red-400 font-medium">Friday, Saturday</span>
+                                <span id="groupAOff2" class="text-red-400 font-medium">—</span>
                             </div>
                             <div class="flex justify-between text-sm">
                                 <span class="text-slate-400">Work Days</span>
-                                <span class="text-emerald-400">Sun, Mon, Tue, Wed, Thu</span>
+                                <span id="groupAWork2" class="text-emerald-400">—</span>
                             </div>
+                            <div class="text-xs text-slate-500" id="groupAPattern2">Loading…</div>
                             <div class="mt-4 pt-4 border-t border-slate-700">
                                 <div class="text-xs text-slate-500 mb-2">Agents:</div>
                                 <div id="groupAAgents" class="grid grid-cols-3 gap-2"></div>
@@ -397,12 +401,13 @@
                         <div class="space-y-3">
                             <div class="flex justify-between text-sm">
                                 <span class="text-slate-400">Days Off</span>
-                                <span class="text-red-400 font-medium">Sunday, Monday</span>
+                                <span id="groupBOff2" class="text-red-400 font-medium">—</span>
                             </div>
                             <div class="flex justify-between text-sm">
                                 <span class="text-slate-400">Work Days</span>
-                                <span class="text-emerald-400">Tue, Wed, Thu, Fri, Sat</span>
+                                <span id="groupBWork2" class="text-emerald-400">—</span>
                             </div>
+                            <div class="text-xs text-slate-500" id="groupBPattern2">Loading…</div>
                             <div class="mt-4 pt-4 border-t border-slate-700">
                                 <div class="text-xs text-slate-500 mb-2">Agents:</div>
                                 <div id="groupBAgents" class="grid grid-cols-3 gap-2"></div>
@@ -414,12 +419,13 @@
                         <div class="space-y-3">
                             <div class="flex justify-between text-sm">
                                 <span class="text-slate-400">Days Off</span>
-                                <span class="text-red-400 font-medium">Tuesday, Wednesday</span>
+                                <span id="groupCOff2" class="text-red-400 font-medium">—</span>
                             </div>
                             <div class="flex justify-between text-sm">
                                 <span class="text-slate-400">Work Days</span>
-                                <span class="text-emerald-400">Thu, Fri, Sat, Sun, Mon</span>
+                                <span id="groupCWork2" class="text-emerald-400">—</span>
                             </div>
+                            <div class="text-xs text-slate-500" id="groupCPattern2">Loading…</div>
                             <div class="mt-4 pt-4 border-t border-slate-700">
                                 <div class="text-xs text-slate-500 mb-2">Agents:</div>
                                 <div id="groupCAgents" class="grid grid-cols-3 gap-2"></div>
@@ -495,6 +501,42 @@
                                 Active
                             </span>
                         </div>
+                        <div class="flex items-center justify-between p-4 bg-slate-900/50 rounded-lg">
+                            <div>
+                                <div class="text-white font-medium">Monthly Pattern Rotation</div>
+                                <div class="text-sm text-slate-400">Patterns rotate C→B, B→A, A→C every month. Cycle repeats every 3 months.</div>
+                            </div>
+                            <span class="text-emerald-400 flex items-center gap-2">
+                                <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                                Active
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yearly Rotation Overview -->
+                <div class="glass rounded-xl p-6 border border-slate-800">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold text-white">Yearly Rotation Overview</h3>
+                        <div class="flex items-center gap-2">
+                            <button onclick="changeOverviewYear(-1)" class="w-8 h-8 rounded bg-slate-700 hover:bg-slate-600 text-white flex items-center justify-center"><i class="fas fa-chevron-left text-xs"></i></button>
+                            <span id="overviewYearLabel" class="text-white font-bold w-16 text-center">2026</span>
+                            <button onclick="changeOverviewYear(1)" class="w-8 h-8 rounded bg-slate-700 hover:bg-slate-600 text-white flex items-center justify-center"><i class="fas fa-chevron-right text-xs"></i></button>
+                        </div>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left text-sm">
+                            <thead class="bg-slate-900/50 text-slate-400">
+                                <tr>
+                                    <th class="p-3">Month</th>
+                                    <th class="p-3">Offset</th>
+                                    <th class="p-3 text-amber-400">Group A</th>
+                                    <th class="p-3 text-indigo-400">Group B</th>
+                                    <th class="p-3 text-pink-400">Group C</th>
+                                </tr>
+                            </thead>
+                            <tbody id="yearlyOverviewTable" class="divide-y divide-slate-800"></tbody>
+                        </table>
                     </div>
                 </div>
             </section>
@@ -522,29 +564,97 @@
             "Ehab Tamer", "Mai Mahmoud", "Salma Mohsen", "Berbara Romany"
         ];
 
+        // Permanent group membership never changes.
         // Group A: indices 0–8  (9 agents)
         // Group B: indices 9–18 (10 agents)
         // Group C: indices 19–27 (9 agents)
-        let agents = agentNames.map((name, idx) => {
-            const group = idx < 9 ? 'A' : idx < 19 ? 'B' : 'C';
-            return {
-                id: idx + 1,
-                name,
-                email: `${name.toLowerCase().replace(/\s+/g, '.')}@nawy.com`,
-                group,
-                status: 'active'
-            };
-        });
+        let agents = agentNames.map((name, idx) => ({
+            id: idx + 1,
+            name,
+            email: `${name.toLowerCase().replace(/\s+/g, '.')}@nawy.com`,
+            group: idx < 9 ? 'A' : idx < 19 ? 'B' : 'C',
+            status: 'active'
+        }));
 
         let currentScheduleMonth = new Date();
         let generatedSchedule = {};
 
+        // ─── Monthly Pattern Rotation ─────────────────────────────────────────────────
+        //
+        // Three off-day PATTERNS (permanent, named after original group):
+        //   pattern-A → off Fri(5) & Sat(6)   → works Sun–Thu (0–4)
+        //   pattern-B → off Sun(0) & Mon(1)   → works Tue–Sat (2–6)
+        //   pattern-C → off Tue(2) & Wed(3)   → works Thu–Mon (0,1,4,5,6)
+        //
+        // Each month the assignment shifts:  C→B, B→A, A→C  (i.e. rotate backward one step)
+        //
+        // Reference: January 2026 = offset 0
+        //   offset 0: A→patA, B→patB, C→patC
+        //   offset 1: A→patC, B→patA, C→patB
+        //   offset 2: A→patB, B→patC, C→patA
+        //   offset 3: (same as 0, cycle repeats)
+        //
+        // To get offset for any month:  ((year*12 + month) - (2026*12 + 0)) mod 3
+
+        const REFERENCE_MONTH_INDEX = 2026 * 12 + 0; // Jan 2026
+
+        function getMonthOffset(year, month) {
+            const idx = year * 12 + month;
+            return ((idx - REFERENCE_MONTH_INDEX) % 3 + 3) % 3;
+        }
+
+        // Returns which pattern (A/B/C) a group follows in a given month
+        function getPatternForGroup(group, year, month) {
+            const offset = getMonthOffset(year, month);
+            // Rotation table: [offset0, offset1, offset2] per group
+            const table = {
+                A: ['A', 'C', 'B'],
+                B: ['B', 'A', 'C'],
+                C: ['C', 'B', 'A']
+            };
+            return table[group][offset];
+        }
+
+        // Does an agent work on a given day-of-week, for a given month context?
+        function doesAgentWork(agent, dayOfWeek, year, month) {
+            const pat = getPatternForGroup(agent.group, year, month);
+            if (pat === 'A') return dayOfWeek >= 0 && dayOfWeek <= 4;       // Off Fri,Sat
+            if (pat === 'B') return dayOfWeek >= 2 && dayOfWeek <= 6;       // Off Sun,Mon
+            /* pat === 'C' */ return dayOfWeek === 0 || dayOfWeek === 1 || dayOfWeek >= 4; // Off Tue,Wed
+        }
+
+        // Human-readable off/work days for a group in a given month
+        function getScheduleLabel(group, year, month) {
+            const pat = getPatternForGroup(group, year, month);
+            return {
+                A: { workDays: 'Sun – Thu', daysOff: 'Fri, Sat'  },
+                B: { workDays: 'Tue – Sat', daysOff: 'Sun, Mon'  },
+                C: { workDays: 'Thu – Mon', daysOff: 'Tue, Wed'  }
+            }[pat];
+        }
+
+        // Coverage for a day-of-week in a specific month context
+        function getCoverageForDay(dayIdx, year, month) {
+            const groups = [];
+            let total = 0;
+            for (const g of ['A','B','C']) {
+                const size = g === 'B' ? 10 : 9;
+                const pat  = getPatternForGroup(g, year, month);
+                let works  = false;
+                if (pat === 'A') works = dayIdx >= 0 && dayIdx <= 4;
+                else if (pat === 'B') works = dayIdx >= 2 && dayIdx <= 6;
+                else works = dayIdx === 0 || dayIdx === 1 || dayIdx >= 4;
+                if (works) { groups.push(g); total += size; }
+            }
+            const morning = Math.ceil(total / 2);
+            return { groups, total, morning, night: total - morning };
+        }
+
         // ─── Auth ─────────────────────────────────────────────────────────────────────
         function handleLogin(e) {
             e.preventDefault();
-            const user = document.getElementById('username').value;
-            const pass = document.getElementById('password').value;
-            if (user === 'admin' && pass === 'admin123') {
+            if (document.getElementById('username').value === 'admin' &&
+                document.getElementById('password').value === 'admin123') {
                 document.getElementById('loginScreen').classList.add('hidden');
                 document.getElementById('mainApp').classList.remove('hidden');
                 initApp();
@@ -553,9 +663,7 @@
             }
         }
 
-        function handleLogout() {
-            location.reload();
-        }
+        function handleLogout() { location.reload(); }
 
         // ─── Init ─────────────────────────────────────────────────────────────────────
         function initApp() {
@@ -565,15 +673,17 @@
             renderWeeklyPattern();
             renderScheduleCalendar();
             renderCoverageTable();
+            updateGroupSummaryCards();
+            renderYearlyOverview();
         }
 
         // ─── Navigation ───────────────────────────────────────────────────────────────
         function showSection(section, e) {
             if (e) e.preventDefault();
-            const sections = ['dashboard', 'agents', 'schedule', 'groups', 'coverage', 'reports', 'settings'];
-            sections.forEach(s => document.getElementById(s + 'Section').classList.add('hidden'));
+            ['dashboard','agents','schedule','groups','coverage','reports','settings']
+                .forEach(s => document.getElementById(s + 'Section').classList.add('hidden'));
             document.getElementById(section + 'Section').classList.remove('hidden');
-            document.querySelectorAll('.sidebar-item').forEach(item => item.classList.remove('active'));
+            document.querySelectorAll('.sidebar-item').forEach(i => i.classList.remove('active'));
             if (e) e.target.closest('.sidebar-item').classList.add('active');
         }
 
@@ -581,60 +691,56 @@
             document.getElementById('sidebar').classList.toggle('-translate-x-full');
         }
 
-        function showNotifications() {
-            showToast('No new notifications');
-        }
+        function showNotifications() { showToast('No new notifications'); }
 
-        // ─── Business Logic ───────────────────────────────────────────────────────────
-        // dayOfWeek: 0=Sun, 1=Mon, 2=Tue, 3=Wed, 4=Thu, 5=Fri, 6=Sat
-        function doesAgentWork(agent, dayOfWeek) {
-            if (agent.group === 'A') {
-                // Off: Fri(5), Sat(6) → Work: Sun–Thu (0–4)
-                return dayOfWeek >= 0 && dayOfWeek <= 4;
-            } else if (agent.group === 'B') {
-                // Off: Sun(0), Mon(1) → Work: Tue–Sat (2–6)
-                return dayOfWeek >= 2 && dayOfWeek <= 6;
-            } else {
-                // Off: Tue(2), Wed(3) → Work: Thu(4), Fri(5), Sat(6), Sun(0), Mon(1)
-                return dayOfWeek === 0 || dayOfWeek === 1 || dayOfWeek >= 4;
+        // ─── Update Group Summary Cards (dynamic per current month) ───────────────────
+        function updateGroupSummaryCards() {
+            const now = new Date();
+            const y = now.getFullYear(), m = now.getMonth();
+            const monthName = now.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+            for (const g of ['A','B','C']) {
+                const lbl   = getScheduleLabel(g, y, m);
+                const pat   = getPatternForGroup(g, y, m);
+                const patText = `Pattern ${pat} — ${monthName}`;
+
+                // Agent Management section cards
+                const offEl = document.getElementById(`group${g}Off`);
+                const wrkEl = document.getElementById(`group${g}Work`);
+                const patEl = document.getElementById(`group${g}Pattern`);
+                if (offEl) offEl.textContent = lbl.daysOff;
+                if (wrkEl) wrkEl.textContent = lbl.workDays;
+                if (patEl) patEl.textContent = patText;
+
+                // Groups section cards
+                const offEl2 = document.getElementById(`group${g}Off2`);
+                const wrkEl2 = document.getElementById(`group${g}Work2`);
+                const patEl2 = document.getElementById(`group${g}Pattern2`);
+                if (offEl2) offEl2.textContent = lbl.daysOff;
+                if (wrkEl2) wrkEl2.textContent = lbl.workDays;
+                if (patEl2) patEl2.textContent = patText;
             }
-        }
-
-        function getCoverageForDay(dayIdx) {
-            const hasA = dayIdx >= 0 && dayIdx <= 4;
-            const hasB = dayIdx >= 2 && dayIdx <= 6;
-            const hasC = dayIdx === 0 || dayIdx === 1 || dayIdx >= 4;
-            const groups = [];
-            let total = 0;
-            if (hasA) { groups.push('A'); total += 9; }
-            if (hasB) { groups.push('B'); total += 10; }
-            if (hasC) { groups.push('C'); total += 9; }
-            const morning = Math.ceil(total / 2);
-            const night = total - morning;
-            return { groups, total, morning, night, hasA, hasB, hasC };
         }
 
         // ─── Render: Agents Table ─────────────────────────────────────────────────────
         function renderAgents() {
-            const tbody = document.getElementById('agentsTable');
+            const tbody  = document.getElementById('agentsTable');
             const search = (document.getElementById('agentSearch')?.value || '').toLowerCase();
-            const today = new Date().getDay();
-            const filtered = agents.filter(a => a.name.toLowerCase().includes(search));
+            const now    = new Date();
+            const today  = now.getDay();
+            const y = now.getFullYear(), m = now.getMonth();
 
-            tbody.innerHTML = filtered.map(agent => {
-                const worksToday = doesAgentWork(agent, today);
-                const workDays = agent.group === 'A' ? 'Sun – Thu' : agent.group === 'B' ? 'Tue – Sat' : 'Thu – Mon';
-                const daysOff  = agent.group === 'A' ? 'Fri, Sat'  : agent.group === 'B' ? 'Sun, Mon'  : 'Tue, Wed';
-                const color    = agent.group === 'A' ? 'amber'     : agent.group === 'B' ? 'indigo'    : 'pink';
+            tbody.innerHTML = agents.filter(a => a.name.toLowerCase().includes(search)).map(agent => {
+                const works  = doesAgentWork(agent, today, y, m);
+                const lbl    = getScheduleLabel(agent.group, y, m);
+                const pat    = getPatternForGroup(agent.group, y, m);
+                const color  = agent.group === 'A' ? 'amber' : agent.group === 'B' ? 'indigo' : 'pink';
                 const initials = agent.name.split(' ').map(n => n[0]).join('');
-
                 return `
                     <tr class="border-b border-slate-800 hover:bg-slate-800/30 transition-colors">
                         <td class="p-4">
                             <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-full bg-${color}-500/20 text-${color}-400 flex items-center justify-center font-bold text-sm">
-                                    ${initials}
-                                </div>
+                                <div class="w-10 h-10 rounded-full bg-${color}-500/20 text-${color}-400 flex items-center justify-center font-bold text-sm">${initials}</div>
                                 <div>
                                     <div class="text-white font-medium">${agent.name}</div>
                                     <div class="text-xs text-slate-500">${agent.email}</div>
@@ -642,24 +748,21 @@
                             </div>
                         </td>
                         <td class="p-4">
-                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-${color}-500/20 text-${color}-400">
-                                Group ${agent.group}
-                            </span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-${color}-500/20 text-${color}-400">Group ${agent.group}</span>
+                            <span class="ml-1 px-2 py-0.5 rounded text-[10px] bg-slate-700 text-slate-400">Pat. ${pat}</span>
                         </td>
-                        <td class="p-4 text-emerald-400 text-sm">${workDays}</td>
-                        <td class="p-4 text-red-400 text-sm">${daysOff}</td>
+                        <td class="p-4 text-emerald-400 text-sm">${lbl.workDays}</td>
+                        <td class="p-4 text-red-400 text-sm">${lbl.daysOff}</td>
                         <td class="p-4">
-                            ${worksToday
+                            ${works
                                 ? '<span class="px-2 py-1 rounded text-xs bg-emerald-500/20 text-emerald-400"><i class="fas fa-check mr-1"></i>Working</span>'
-                                : '<span class="px-2 py-1 rounded text-xs bg-red-500/20 text-red-400"><i class="fas fa-bed mr-1"></i>Day Off</span>'
-                            }
+                                : '<span class="px-2 py-1 rounded text-xs bg-red-500/20 text-red-400"><i class="fas fa-bed mr-1"></i>Day Off</span>'}
                         </td>
-                    </tr>
-                `;
+                    </tr>`;
             }).join('');
         }
 
-        // ─── Render: Groups ───────────────────────────────────────────────────────────
+        // ─── Render: Groups Section ───────────────────────────────────────────────────
         function renderGroups() {
             const renderList = (groupAgents, color) => groupAgents.map(a => `
                 <div class="flex items-center gap-2 p-2 bg-slate-800/50 rounded text-xs">
@@ -667,22 +770,23 @@
                         ${a.name.split(' ').map(n => n[0]).join('')}
                     </div>
                     <span class="text-slate-300 truncate">${a.name.split(' ')[0]}</span>
-                </div>
-            `).join('');
+                </div>`).join('');
 
-            const elA = document.getElementById('groupAAgents');
-            const elB = document.getElementById('groupBAgents');
-            const elC = document.getElementById('groupCAgents');
-            if (elA) elA.innerHTML = renderList(agents.filter(a => a.group === 'A'), 'amber');
-            if (elB) elB.innerHTML = renderList(agents.filter(a => a.group === 'B'), 'indigo');
-            if (elC) elC.innerHTML = renderList(agents.filter(a => a.group === 'C'), 'pink');
+            ['A','B','C'].forEach(g => {
+                const el = document.getElementById(`group${g}Agents`);
+                const color = g === 'A' ? 'amber' : g === 'B' ? 'indigo' : 'pink';
+                if (el) el.innerHTML = renderList(agents.filter(a => a.group === g), color);
+            });
         }
 
         // ─── Render: Today's Schedule ─────────────────────────────────────────────────
         function renderTodaySchedule() {
-            const today = new Date().getDay();
-            const working = agents.filter(a => doesAgentWork(a, today));
-            const off     = agents.filter(a => !doesAgentWork(a, today));
+            const now   = new Date();
+            const today = now.getDay();
+            const y = now.getFullYear(), m = now.getMonth();
+
+            const working = agents.filter(a => doesAgentWork(a, today, y, m));
+            const off     = agents.filter(a => !doesAgentWork(a, today, y, m));
             const mid     = Math.ceil(working.length / 2);
             const morning = working.slice(0, mid);
             const night   = working.slice(mid);
@@ -691,109 +795,116 @@
             setEl('todayMorningCount', morning.length);
             setEl('todayNightCount', night.length);
 
-            const agentCard = (a, shiftClass) => {
+            const agentCard = a => {
                 const color = a.group === 'A' ? 'amber' : a.group === 'B' ? 'indigo' : 'pink';
-                const initials = a.name.split(' ').map(n => n[0]).join('');
-                return `
-                    <div class="flex items-center gap-2 p-2 bg-${color}-500/10 rounded border border-${color}-500/20 text-sm">
-                        <div class="w-6 h-6 rounded-full bg-${color}-500/20 flex items-center justify-center text-${color}-400 text-xs font-bold flex-shrink-0">
-                            ${initials}
-                        </div>
-                        <span class="text-slate-300 truncate flex-1">${a.name}</span>
-                        <span class="text-[10px] text-${color}-400">G${a.group}</span>
-                    </div>
-                `;
+                return `<div class="flex items-center gap-2 p-2 bg-${color}-500/10 rounded border border-${color}-500/20 text-sm">
+                    <div class="w-6 h-6 rounded-full bg-${color}-500/20 flex items-center justify-center text-${color}-400 text-xs font-bold flex-shrink-0">
+                        ${a.name.split(' ').map(n => n[0]).join('')}</div>
+                    <span class="text-slate-300 truncate flex-1">${a.name}</span>
+                    <span class="text-[10px] text-${color}-400">G${a.group}</span></div>`;
             };
-
-            const offCard = (a) => {
+            const offCard = a => {
                 const color = a.group === 'A' ? 'amber' : a.group === 'B' ? 'indigo' : 'pink';
-                const initials = a.name.split(' ').map(n => n[0]).join('');
-                return `
-                    <div class="flex items-center gap-2 p-2 bg-red-500/10 rounded border border-red-500/20 text-sm">
-                        <div class="w-6 h-6 rounded-full bg-${color}-500/20 flex items-center justify-center text-${color}-400 text-xs font-bold flex-shrink-0">
-                            ${initials}
-                        </div>
-                        <span class="text-slate-400 truncate flex-1">${a.name}</span>
-                        <span class="text-[10px] text-slate-500">G${a.group}</span>
-                    </div>
-                `;
+                return `<div class="flex items-center gap-2 p-2 bg-red-500/10 rounded border border-red-500/20 text-sm">
+                    <div class="w-6 h-6 rounded-full bg-${color}-500/20 flex items-center justify-center text-${color}-400 text-xs font-bold flex-shrink-0">
+                        ${a.name.split(' ').map(n => n[0]).join('')}</div>
+                    <span class="text-slate-400 truncate flex-1">${a.name}</span>
+                    <span class="text-[10px] text-slate-500">G${a.group}</span></div>`;
             };
 
             const mEl = document.getElementById('todayMorningAgents');
             const nEl = document.getElementById('todayNightAgents');
             const oEl = document.getElementById('todayOffAgents');
-            if (mEl) mEl.innerHTML = morning.map(a => agentCard(a, 'morning')).join('');
-            if (nEl) nEl.innerHTML = night.map(a => agentCard(a, 'night')).join('');
-            if (oEl) oEl.innerHTML = off.map(a => offCard(a)).join('');
+            if (mEl) mEl.innerHTML = morning.map(agentCard).join('');
+            if (nEl) nEl.innerHTML = night.map(agentCard).join('');
+            if (oEl) oEl.innerHTML = off.map(offCard).join('');
         }
 
-        // ─── Render: Weekly Pattern ───────────────────────────────────────────────────
+        // ─── Render: Weekly Pattern (for current month) ───────────────────────────────
         function renderWeeklyPattern() {
-            const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-            const today = new Date().getDay();
+            const days  = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+            const now   = new Date();
+            const today = now.getDay();
+            const y = now.getFullYear(), m = now.getMonth();
 
             document.getElementById('weeklyPattern').innerHTML = days.map((day, idx) => {
-                const cov = getCoverageForDay(idx);
+                const cov     = getCoverageForDay(idx, y, m);
                 const isToday = idx === today;
+                const hasGroup = g => cov.groups.includes(g);
                 return `
                     <div class="text-center p-3 rounded-lg border ${isToday ? 'border-blue-500 bg-blue-500/10' : 'border-slate-700 bg-slate-800/50'}">
                         <div class="text-sm font-medium ${isToday ? 'text-blue-400' : 'text-slate-300'} mb-2">${day}</div>
                         <div class="text-2xl font-bold text-white mb-1">${cov.total}</div>
                         <div class="text-xs text-slate-400 mb-2">agents</div>
                         <div class="space-y-1 text-[10px]">
-                            ${cov.hasA ? '<div class="text-amber-400">A ✓</div>' : '<div class="text-slate-600">A</div>'}
-                            ${cov.hasB ? '<div class="text-indigo-400">B ✓</div>' : '<div class="text-slate-600">B</div>'}
-                            ${cov.hasC ? '<div class="text-pink-400">C ✓</div>' : '<div class="text-slate-600">C</div>'}
+                            ${hasGroup('A') ? '<div class="text-amber-400">A ✓</div>' : '<div class="text-slate-600">A</div>'}
+                            ${hasGroup('B') ? '<div class="text-indigo-400">B ✓</div>' : '<div class="text-slate-600">B</div>'}
+                            ${hasGroup('C') ? '<div class="text-pink-400">C ✓</div>'  : '<div class="text-slate-600">C</div>'}
                         </div>
                         <div class="mt-2 pt-2 border-t border-slate-700 text-[10px]">
                             <span class="text-amber-400">${cov.morning}M</span> / <span class="text-indigo-400">${cov.night}N</span>
                         </div>
-                    </div>
-                `;
+                    </div>`;
             }).join('');
         }
 
         // ─── Render: Coverage Table ───────────────────────────────────────────────────
         function renderCoverageTable() {
-            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
             const groupColors = { A: 'amber', B: 'indigo', C: 'pink' };
+            const now = new Date();
+            const y = now.getFullYear(), m = now.getMonth();
 
             document.getElementById('coverageTable').innerHTML = days.map((day, idx) => {
-                const cov = getCoverageForDay(idx);
+                const cov = getCoverageForDay(idx, y, m);
                 return `
                     <tr class="border-b border-slate-800 hover:bg-slate-800/20">
                         <td class="p-4 text-white font-medium">${day}</td>
-                        <td class="p-4">
-                            ${cov.groups.map(g => `<span class="px-2 py-1 rounded bg-${groupColors[g]}-500/20 text-${groupColors[g]}-400 text-xs mr-1">Group ${g}</span>`).join('')}
-                        </td>
+                        <td class="p-4">${cov.groups.map(g =>
+                            `<span class="px-2 py-1 rounded bg-${groupColors[g]}-500/20 text-${groupColors[g]}-400 text-xs mr-1">Group ${g}</span>`
+                        ).join('')}</td>
                         <td class="p-4 text-center text-white font-bold">${cov.total}</td>
                         <td class="p-4 text-center text-amber-400">${cov.morning}</td>
                         <td class="p-4 text-center text-indigo-400">${cov.night}</td>
                         <td class="p-4"><span class="text-emerald-400 text-xs">✓ Covered</span></td>
-                    </tr>
-                `;
+                    </tr>`;
             }).join('');
         }
 
         // ─── Render: Schedule Calendar ────────────────────────────────────────────────
         function renderScheduleCalendar() {
-            const year      = currentScheduleMonth.getFullYear();
-            const month     = currentScheduleMonth.getMonth();
-            const firstDay  = new Date(year, month, 1).getDay();
+            const year  = currentScheduleMonth.getFullYear();
+            const month = currentScheduleMonth.getMonth();
+            const firstDay    = new Date(year, month, 1).getDay();
             const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const offset      = getMonthOffset(year, month);
+
+            // Show which pattern each group follows this month
+            const patInfo = ['A','B','C'].map(g => {
+                const p   = getPatternForGroup(g, year, month);
+                const lbl = getScheduleLabel(g, year, month);
+                const color = g === 'A' ? 'amber' : g === 'B' ? 'indigo' : 'pink';
+                return `<span class="text-${color}-400">G${g}→Pat.${p} (off ${lbl.daysOff})</span>`;
+            }).join(' &nbsp;|&nbsp; ');
 
             document.getElementById('scheduleMonthTitle').textContent =
                 currentScheduleMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
 
-            let html = '';
-
-            // Empty cells before first day
-            for (let i = 0; i < firstDay; i++) {
-                html += `<div class="calendar-day bg-slate-900/30 rounded-lg"></div>`;
+            // Inject pattern info subtitle
+            let sub = document.getElementById('schedulePatternInfo');
+            if (!sub) {
+                sub = document.createElement('p');
+                sub.id = 'schedulePatternInfo';
+                sub.className = 'text-xs text-slate-400 mt-1';
+                document.getElementById('scheduleMonthTitle').after(sub);
             }
+            sub.innerHTML = `Rotation offset ${offset}: ${patInfo}`;
+
+            let html = '';
+            for (let i = 0; i < firstDay; i++) html += `<div class="calendar-day bg-slate-900/30 rounded-lg"></div>`;
 
             for (let day = 1; day <= daysInMonth; day++) {
-                const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
                 const data    = generatedSchedule[dateStr];
                 const isToday = new Date().toDateString() === new Date(year, month, day).toDateString();
 
@@ -805,37 +916,21 @@
                         </div>
                         ${data ? `
                             <div class="space-y-1 text-xs">
-                                <div class="flex justify-between text-amber-400">
-                                    <span>Morning</span>
-                                    <span class="font-bold">${data.morning.length}</span>
-                                </div>
-                                <div class="flex justify-between text-indigo-400">
-                                    <span>Night</span>
-                                    <span class="font-bold">${data.night.length}</span>
-                                </div>
-                                <div class="text-[10px] text-slate-500 mt-1 pt-1 border-t border-slate-700">
-                                    Total: ${data.totalWorking}
-                                </div>
-                            </div>
-                        ` : '<div class="text-xs text-slate-600 mt-4">Generate</div>'}
-                    </div>
-                `;
+                                <div class="flex justify-between text-amber-400"><span>Morning</span><span class="font-bold">${data.morning.length}</span></div>
+                                <div class="flex justify-between text-indigo-400"><span>Night</span><span class="font-bold">${data.night.length}</span></div>
+                                <div class="text-[10px] text-slate-500 mt-1 pt-1 border-t border-slate-700">Total: ${data.totalWorking}</div>
+                            </div>` : '<div class="text-xs text-slate-600 mt-4">Generate</div>'}
+                    </div>`;
             }
-
             document.getElementById('scheduleCalendar').innerHTML = html;
         }
 
         // ─── Actions ──────────────────────────────────────────────────────────────────
         function autoAssignGroups() {
             const shuffled = [...agents].sort(() => Math.random() - 0.5);
-            shuffled.forEach((agent, idx) => {
-                agent.group = idx < 9 ? 'A' : idx < 19 ? 'B' : 'C';
-            });
-            renderAgents();
-            renderGroups();
-            renderTodaySchedule();
-            renderWeeklyPattern();
-            renderCoverageTable();
+            shuffled.forEach((a, i) => { a.group = i < 9 ? 'A' : i < 19 ? 'B' : 'C'; });
+            renderAgents(); renderGroups(); renderTodaySchedule();
+            renderWeeklyPattern(); renderCoverageTable(); updateGroupSummaryCards();
             showToast('Groups reassigned randomly (A:9, B:10, C:9)');
         }
 
@@ -843,26 +938,23 @@
             const year  = currentScheduleMonth.getFullYear();
             const month = currentScheduleMonth.getMonth();
             const days  = new Date(year, month + 1, 0).getDate();
-
             generatedSchedule = {};
 
             for (let day = 1; day <= days; day++) {
-                const date      = new Date(year, month, day);
-                const dayOfWeek = date.getDay();
-                const dateStr   = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-                const working   = agents.filter(a => doesAgentWork(a, dayOfWeek));
+                const dayOfWeek = new Date(year, month, day).getDay();
+                const dateStr   = `${year}-${String(month+1).padStart(2,'0')}-${String(day).padStart(2,'0')}`;
+                const working   = agents.filter(a => doesAgentWork(a, dayOfWeek, year, month));
                 const mid       = Math.ceil(working.length / 2);
-
                 generatedSchedule[dateStr] = {
-                    morning: working.slice(0, mid).map(a => ({ agentId: a.id, agentName: a.name, group: a.group })),
-                    night:   working.slice(mid).map(a => ({ agentId: a.id, agentName: a.name, group: a.group })),
+                    morning:      working.slice(0, mid).map(a => ({ agentId: a.id, agentName: a.name, group: a.group })),
+                    night:        working.slice(mid).map(a => ({ agentId: a.id, agentName: a.name, group: a.group })),
                     dayOfWeek,
                     totalWorking: working.length
                 };
             }
-
             renderScheduleCalendar();
-            showToast('Monthly 3-group rotation generated');
+            const offset = getMonthOffset(year, month);
+            showToast(`Schedule generated (Rotation offset ${offset})`);
         }
 
         function changeMonth(delta) {
@@ -872,40 +964,71 @@
 
         // ─── Exports ──────────────────────────────────────────────────────────────────
         function exportSchedule() {
-            if (Object.keys(generatedSchedule).length === 0) {
-                showToast('Please generate schedule first');
-                return;
-            }
+            if (!Object.keys(generatedSchedule).length) { showToast('Please generate schedule first'); return; }
             let csv = 'Date,Day,Morning_Count,Night_Count,Morning_Agents,Night_Agents\n';
             Object.entries(generatedSchedule).forEach(([date, data]) => {
-                const dayName     = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][data.dayOfWeek];
-                const morningNames = data.morning.map(a => `${a.agentName}(G${a.group})`).join('; ');
-                const nightNames   = data.night.map(a => `${a.agentName}(G${a.group})`).join('; ');
-                csv += `${date},${dayName},${data.morning.length},${data.night.length},"${morningNames}","${nightNames}"\n`;
+                const dayName = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][data.dayOfWeek];
+                csv += `${date},${dayName},${data.morning.length},${data.night.length},` +
+                    `"${data.morning.map(a=>`${a.agentName}(G${a.group})`).join('; ')}",` +
+                    `"${data.night.map(a=>`${a.agentName}(G${a.group})`).join('; ')}"\n`;
             });
-            downloadCSV(csv, `3Group_Schedule_${currentScheduleMonth.toISOString().slice(0, 7)}.csv`);
+            downloadCSV(csv, `3Group_Schedule_${currentScheduleMonth.toISOString().slice(0,7)}.csv`);
             showToast('Schedule exported to CSV');
         }
 
         function exportAgentList() {
-            let csv = 'ID,Name,Email,Group,Work_Days,Days_Off\n';
+            const now = new Date();
+            const y = now.getFullYear(), m = now.getMonth();
+            let csv = 'ID,Name,Email,Group,Pattern_This_Month,Work_Days,Days_Off\n';
             agents.forEach(a => {
-                const workDays = a.group === 'A' ? 'Sun-Thu' : a.group === 'B' ? 'Tue-Sat' : 'Thu-Mon';
-                const daysOff  = a.group === 'A' ? 'Fri-Sat' : a.group === 'B' ? 'Sun-Mon' : 'Tue-Wed';
-                csv += `${a.id},"${a.name}",${a.email},${a.group},${workDays},${daysOff}\n`;
+                const pat = getPatternForGroup(a.group, y, m);
+                const lbl = getScheduleLabel(a.group, y, m);
+                csv += `${a.id},"${a.name}",${a.email},${a.group},${pat},${lbl.workDays.replace(' – ','-')},${lbl.daysOff}\n`;
             });
             downloadCSV(csv, 'Agent_Roster_3Groups.csv');
             showToast('Agent list exported');
         }
 
         function downloadCSV(csv, filename) {
-            const blob = new Blob([csv], { type: 'text/csv' });
-            const url  = URL.createObjectURL(blob);
+            const url  = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
             const link = document.createElement('a');
-            link.href     = url;
-            link.download = filename;
-            link.click();
+            link.href = url; link.download = filename; link.click();
             URL.revokeObjectURL(url);
+        }
+
+        // ─── Yearly Overview ──────────────────────────────────────────────────────────
+        let overviewYear = new Date().getFullYear();
+
+        function renderYearlyOverview() {
+            const months = ['January','February','March','April','May','June',
+                            'July','August','September','October','November','December'];
+            const nowM = new Date().getMonth();
+            const nowY = new Date().getFullYear();
+            document.getElementById('overviewYearLabel').textContent = overviewYear;
+
+            document.getElementById('yearlyOverviewTable').innerHTML = months.map((name, m) => {
+                const offset  = getMonthOffset(overviewYear, m);
+                const isNow   = overviewYear === nowY && m === nowM;
+                const rowCls  = isNow ? 'bg-blue-500/10' : '';
+                const getInfo = g => {
+                    const pat = getPatternForGroup(g, overviewYear, m);
+                    const lbl = getScheduleLabel(g, overviewYear, m);
+                    return `<span class="font-medium">Pat.${pat}</span> <span class="text-slate-500">(off ${lbl.daysOff})</span>`;
+                };
+                return `
+                    <tr class="border-b border-slate-800 ${rowCls}">
+                        <td class="p-3 text-white font-medium">${name} ${overviewYear} ${isNow ? '<span class="ml-1 px-1.5 py-0.5 text-[10px] bg-blue-500/30 text-blue-400 rounded">NOW</span>' : ''}</td>
+                        <td class="p-3 text-slate-400">${offset}</td>
+                        <td class="p-3 text-amber-400 text-xs">${getInfo('A')}</td>
+                        <td class="p-3 text-indigo-400 text-xs">${getInfo('B')}</td>
+                        <td class="p-3 text-pink-400 text-xs">${getInfo('C')}</td>
+                    </tr>`;
+            }).join('');
+        }
+
+        function changeOverviewYear(delta) {
+            overviewYear += delta;
+            renderYearlyOverview();
         }
 
         // ─── Toast ────────────────────────────────────────────────────────────────────
